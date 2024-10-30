@@ -1,0 +1,151 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: black;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo img {
+    position: absolute;
+    top: 37px;
+    left: 90px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    margin-top: 75px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.discord-button {
+    position: absolute;
+    top: 55px;
+    right: 90px;
+    display: flex;
+    align-items: center;
+    background-color: #5865F2;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 30px;
+    text-decoration: none;
+}
+
+.discord-button img {
+    height: 20px;
+    margin-right: 5px;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    width: 100%;
+}
+
+.text-content {
+    position: absolute;
+    top: 350px;
+    left: 100px;
+    text-align: left;
+}
+
+.text-fade-container {
+    position: absolute;
+    top: 450px;
+    right: 90px;
+    width: 500px;
+    /* Adjust as necessary */
+    height: 100px;
+    /* Set a fixed height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.fading-text {
+    font-size: 3rem;
+    /* Adjust font size as necessary */
+    color: white;
+    opacity: 0;
+    transform: translateY(-20px);
+    /* Start slightly above */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: white;
+}
+
+p {
+    font-size: 1.2rem;
+    color: rgb(126, 126, 126);
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.button-container {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.button {
+    background-color: #5865F2;
+    color: white;
+    margin-top: 20px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    border-radius: 35px;
+}
+
+.button:hover {
+    background-color: #4752C4;
+    border-radius: 35px;
+}

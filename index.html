@@ -1,0 +1,30 @@
+<!doctypehtml><html lang=en><meta charset=UTF-8><meta content="width=device-width,initial-scale=1"name=viewport><link href=styles.css rel=stylesheet><title>rofl.rocks</title><header class=fade-in><div class=logo><img alt="Bot Icon"src=logo.jpg></div><nav class=fade-in><ul><li><a href=https://rofl.rocks/commands>commands</a><li><a href=https://discord.gg/4NrXE3XGRQ>support</a><li><a href=https://rofl.rocks/docs>docs</a></ul></nav><a href=https://discord.gg/4NrXE3XGRQ class="fade-in discord-button"><img alt="Discord Logo"src=https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/discord-white-icon.png> discord</a></header><main><div class="fade-in text-content"><h1>rofl.rocks</h1><p>Completely free multi-purpose discord bot, having features like<br>antinuke, antiraid, filter, moderation and much more<div class=button-container><a href=https://discord.com/oauth2/authorize?client_id=1298758343355269180&permissions=8&integration_type=0&scope=bot class=button>add to your server</a> <a href=mailto:support@rofl.rocks class=button>contact us</a></div></div><div class="fade-in text-fade-container"><div class=fading-text id=fading-text></div></div></main><script>document.addEventListener('DOMContentLoaded', () => {
+    const fadeElements = document.querySelectorAll('.fade-in');
+    fadeElements.forEach((el, index) => {
+        setTimeout(() => {
+            el.classList.add('visible');
+        }, index * 200);
+    });
+
+    const words = ["moderation", "antinuke", "filter", "antiraid", "lastfm"];
+    const fadingTextElement = document.getElementById('fading-text');
+    let currentIndex = 0;
+
+    function fadeUp() {
+        fadingTextElement.textContent = words[currentIndex];
+        fadingTextElement.style.opacity = '1';
+        fadingTextElement.style.transform = 'translateY(-20px)';
+
+        setTimeout(() => {
+            fadingTextElement.style.opacity = '0';
+        }, 2000);
+
+        setTimeout(() => {
+            currentIndex = (currentIndex + 1) % words.length;
+            fadingTextElement.style.transform = 'translateY(0)';
+            fadeUp();
+        }, 2500);
+    }
+
+    fadeUp();
+});</script>
